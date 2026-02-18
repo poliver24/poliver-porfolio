@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 const navItems = [
     { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "How I Work", href: "#how-i-work" },
+    { label: "Capabilities", href: "#skills" },
     { label: "Experience", href: "#experience" },
     { label: "Contact", href: "#contact" },
 ];
@@ -24,16 +25,16 @@ const Header = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
+                    ? "bg-background/92 backdrop-blur-md border-b border-border"
                     : "bg-transparent"
                 }`}
         >
-            <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
                 <a href="#" className="font-display text-lg font-semibold text-foreground tracking-tight">
                     <span className="font-bold">PO</span>liver
                 </a>
 
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-7">
                     {navItems.map((item) => (
                         <a
                             key={item.href}
@@ -67,7 +68,7 @@ const Header = () => {
                             key={item.href}
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block py-2 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+                            className="block py-2.5 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
                         >
                             {item.label}
                         </a>

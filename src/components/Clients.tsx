@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const clients = [
-    "Early-stage startups figuring out their architecture",
+    "Early-stage startups defining their technical direction",
+    "Founders who want an engineer with opinions, not just a ticket-taker",
     "Teams shipping complex features into production",
-    "Companies where engineers are expected to own the problem end-to-end",
-    "Founders who want a developer, not just a ticket-taker",
-    "Organisations working on something that genuinely matters",
+    "Teams building in life sciences, climate, or community-driven domains",
+    "Organisations that expect engineers to own problems end-to-end",
 ];
 
 const Clients = () => {
@@ -17,16 +17,17 @@ const Clients = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
+                    className="mb-10"
                 >
-                    <p className="font-body text-sm tracking-widest uppercase text-primary mb-4">
+                    <p className="font-body text-xs tracking-[0.18em] uppercase text-primary/80 mb-4">
                         Who I work with
                     </p>
-                    <h2 className="font-display text-3xl sm:text-4xl font-medium text-foreground mb-10">
+                    <h2 className="font-display text-3xl sm:text-4xl font-medium text-foreground">
                         Who I work best with
                     </h2>
                 </motion.div>
 
-                <ul className="space-y-4">
+                <ul className="space-y-5">
                     {clients.map((item, i) => (
                         <motion.li
                             key={i}
@@ -34,9 +35,9 @@ const Clients = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.3, delay: i * 0.06 }}
-                            className="font-body text-base text-muted-foreground flex items-start gap-3 leading-relaxed"
+                            className="font-body text-base text-muted-foreground flex items-start gap-4 leading-relaxed"
                         >
-                            <span className="mt-[9px] w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                            <span className="mt-[11px] w-1 h-1 rounded-full bg-primary/60 flex-shrink-0" />
                             {item}
                         </motion.li>
                     ))}

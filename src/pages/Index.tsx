@@ -6,6 +6,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import HowIWork from "@/components/HowIWork";
 
 const Index = () => (
     <div className="min-h-screen bg-background">
@@ -14,6 +15,7 @@ const Index = () => (
             <Hero />
             <Clients />
             <About />
+            <HowIWork />
             <Skills />
             <Experience />
             <Contact />

@@ -1,68 +1,66 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
     return (
-        <section className="min-h-[90vh] flex items-center justify-center px-6 pt-28 pb-20">
-            <div className="max-w-3xl mx-auto">
+        <section className="min-h-[92vh] flex items-center px-6 pt-32 pb-24">
+            <div className="max-w-3xl mx-auto w-full">
+
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="mb-10"
                 >
-                    <p className="font-body text-sm tracking-widest uppercase text-primary mb-6">
-                        Software Engineering · Product Delivery · Architecture
-                    </p>
+                    <span className="inline-block font-body text-xs tracking-[0.2em] uppercase text-primary/80 border border-primary/20 rounded-full px-3 py-1">
+                        Oxford, UK · Available for work
+                    </span>
                 </motion.div>
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="font-display text-4xl sm:text-5xl md:text-6xl font-medium leading-[1.15] text-foreground mb-8"
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                    className="font-display text-4xl sm:text-5xl md:text-[3.5rem] font-medium leading-[1.18] text-foreground mb-8 tracking-tight"
                 >
-                    Technical direction and hands-on delivery for early-stage teams.
+                    I build production software for teams solving real-world problems.
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl mb-3"
+                    transition={{ duration: 0.6, delay: 0.35 }}
+                    className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl mb-2"
                 >
-                    I help founders turn ambiguous ideas into production systems that hold up.
-                    From MVP architecture to scalable infrastructure, I design and build software that survives growth.
+                    Senior software engineer based in Oxford.
                 </motion.p>
-
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.45 }}
-                    className="font-body text-sm text-muted-foreground/70 leading-relaxed max-w-2xl mb-12"
+                    transition={{ duration: 0.6, delay: 0.42 }}
+                    className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl mb-14"
                 >
-                    Oxford-based. Working with early-stage startups across the UK and remotely.
+                    I work with early-stage teams to define architecture, ship production features, and build systems that hold up under real use.
                 </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.52 }}
                     className="flex flex-wrap gap-4"
                 >
                     <a
                         href="#contact"
-                        className="inline-flex items-center gap-2 px-7 py-3.5 bg-foreground text-background font-body text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center gap-2 px-7 py-3.5 bg-foreground text-background font-body text-sm font-medium rounded-md hover:opacity-85 transition-opacity"
                     >
-                        Get in Touch
+                        Work With Me
                         <ArrowRight className="w-4 h-4" />
                     </a>
                     <a
-                        href="/poliver_cv.pdf"
-                        download="Patrick_Oliver_CV.pdf"
+                        href="#experience"
                         className="inline-flex items-center gap-2 px-7 py-3.5 border border-border text-foreground font-body text-sm font-medium rounded-md hover:bg-secondary transition-colors"
                     >
-                        <Download className="w-4 h-4" />
-                        Download CV
+                        View Experience
                     </a>
                 </motion.div>
             </div>
